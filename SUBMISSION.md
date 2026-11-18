@@ -37,7 +37,7 @@ Deadline: **9 Des 2026 08:00 UTC (15:00 WIB)**. Jangan submit sebelum deploy + v
 - [x] Contract compiled + local-tested 27/27, frontend built, promo draft written
 - [x] Local git repo initialised + committed (no remote yet)
 - [x] Deploy — DONE 18 Nov 2026: `0x7c4686636e03fc055b588c1e0f6753048Cd56Cd2`
-- [ ] BscScan verification — in progress: source is a single file, compiler 0.8.28, optimizer 200 runs, evmVersion paris, MIT
+- [x] BscScan verification — ✅ DONE 2026-11-18 ~19:00 WIB via Etherscan V2 API (`verifysourcecode`, chainid 56, GUID ci5sxjeniy4kjscufiud6svxakp43rfdd7zcggjptkafcxjkch, "Pass - Verified"). NOTE: V2 API requires `codeformat=solidity-single-file`, otherwise bare "Error!".
 - [ ] GitHub public push — BLOCKED: needs user to choose repo/account
 - [ ] 30-address drive — BLOCKED: needs deployed contract
 - [ ] Project submission + promo survey submission — not started
