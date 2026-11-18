@@ -1,59 +1,59 @@
-# Draft thread X — AgentRadar (Promotion Award)
+# X thread draft — AgentRadar (Promotion Award)
 
-> DRAFT — BELUM DIPOSTING. Posting butuh persetujuan user.
-> Untuk Promotion Award: konten orisinal tentang proyek peserta, hashtag
-> #BinanceWalletHackathon dan #AgenticWallet, lalu submit link via survei resmi.
-> Jujur, tanpa janji penghasilan, tanpa klaim menang.
+> DRAFT — NOT POSTED. Posting needs the user's approval.
+> For the Promotion Award: original content about a participating project, hashtags
+> #BinanceWalletHackathon and #AgenticWallet, then submit the link via the official survey.
+> Honest, no income promises, no claims of winning.
 
 ---
 
 **1/**
-Aku lagi bangun AgentRadar untuk Agent ID Hackathon.
+I'm building AgentRadar for the Agent ID Hackathon.
 
-Satu kontrak, tiga fungsi — semuanya cuma bisa dipakai kalau kamu pegang Agent ID (.ai).
+One contract, three features — and all of them only work if you hold an Agent ID (.ai).
 
-Check-in harian, bayar pakai nama, dan squad 3 orang. Ini ceritanya 🧵
+Daily check-in, pay by name, and 3-person squads. Here's the story 🧵
 #BinanceWalletHackathon #AgenticWallet
 
 **2/**
-Masalahnya simpel: Agent ID itu nama on-chain kita, tapi hampir tidak dipakai di dalam produk.
+The problem is simple: Agent ID is our on-chain name, but it's barely used inside any product.
 
-AgentRadar menjadikannya gerbang beneran: tanpa Agent ID, kontraknya nolak. `balanceOf` > 0 atau tidak bisa check-in, tidak bisa daftar nama, tidak bisa gabung squad.
+AgentRadar turns it into a real gate: without an Agent ID, the contract says no. `balanceOf` > 0, or you can't check in, can't register a name, can't join a squad.
 
 **3/**
-Modul 1 — Radar 📡
-Check-in 1x sehari (UTC), streak tercatat on-chain. Plus daftar free-mint yang sudah lolos DYOR.
+Module 1 — Radar 📡
+Check in once a day (UTC), streak recorded on-chain. Plus a list of free mints that passed DYOR.
 
-Alasan nyata buat balik tiap hari, bukan sekadar badge pajangan.
+A real reason to come back every day, not just a badge to show off.
 
 **4/**
-Modul 2 — Pay by Name 💸
-Kirim BNB cukup ketik `alice.ai`, bukan alamat 0x… panjang.
+Module 2 — Pay by Name 💸
+Send BNB by typing `alice.ai`, not a long 0x… address.
 
-Namanya didaftarkan sendiri oleh pemiliknya (opt-in). 100% dana diteruskan, tanpa fee, kontrak tidak menyimpan dana. Bukan alat buat ngintip wallet orang lain.
+Names are registered by their owners themselves (opt-in). 100% of the funds are forwarded, no fee, the contract holds no funds. Not a tool for peeking at other people's wallets.
 
 **5/**
-Modul 3 — Squad 👥
-Tim 3 Agent ID, modelnya tim collab PodMint. Menang/kalah dan poin tercatat on-chain, jadi reputasi tim nggak bisa kabur di tengah jalan.
+Module 3 — Squad 👥
+Teams of 3 Agent IDs, modelled on PodMint collab teams. Wins/losses and points recorded on-chain, so a team's reputation can't run away mid-round.
 
 **6/**
-Yang aku jaga dari awal:
-- tanpa login QR / pairing code
-- semua transaksi konfirmasi manual di wallet, tanpa auto-sign
-- tanpa janji cuan — ini alat, bukan mesin uang
-- kontrak 1 file, open-source, tanpa fungsi yang bisa menyentuh dana user
+What I guarded from the start:
+- no QR login / pairing codes
+- every transaction confirmed manually in the wallet, no auto-sign
+- no income promises — this is a tool, not a money machine
+- one-file contract, open-source, with no function that can touch user funds
 
 **7/**
-Status: kontrak sudah jadi, dikompilasi, dan lolos 27 tes lokal. Deploy ke BNB Chain + verifikasi menyusul.
+Status: the contract is written, compiled, and passed 27 local tests. Deploy to BNB Chain + verification coming next.
 
-Kalau kamu pegang Agent ID, kamu bakal jadi 1 dari 30 alamat pertama yang aku butuhkan buat coba. Mau ikut?
+If you hold an Agent ID, you'd be one of the first 30 addresses I need to try it out. Want in?
 #BinanceWalletHackathon #AgenticWallet
 
 ---
 
-## Catatan posting
+## Posting notes
 
-- Post 1–7 sebagai thread dari @vanmuse, dalam Bahasa Indonesia.
-- Jangan tambahkan klaim hadiah / janji menang / janji cuan.
-- Setelah posting, submit link thread via survei resmi Promotion Award.
-- Hashtag wajib ada di post: #BinanceWalletHackathon #AgenticWallet.
+- Post 1–7 as a thread from @vanmuse, in English.
+- Do not add prize claims / winning promises / income promises.
+- After posting, submit the thread link via the official Promotion Award survey.
+- Required hashtags in the posts: #BinanceWalletHackathon #AgenticWallet.
