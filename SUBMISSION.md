@@ -2,6 +2,8 @@
 
 Deadline: **9 Des 2026 08:00 UTC (15:00 WIB)**. Jangan submit sebelum deploy + verifikasi.
 
+**Form submit proyek (tombol "Submit Project Now" di pengumuman):** https://app.binance.com/uni-qr/user-survey/fb26d2bd25e04329b1ba77c7b3811d23 — survei Binance, perlu login akun Binance. JANGAN tertukar dengan survei Promotion Award (X link): https://app.binance.com/uni-qr/user-survey/ff6832f8d2984af289068c9450a3c98c
+
 ## Fields to paste into the hackathon submission form
 
 - **Project name:** AgentRadar
