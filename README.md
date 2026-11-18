@@ -46,7 +46,7 @@ One contract = one contract address for the judges to count (interacting Agent I
 - **Measured deploy gas (local): 1,502,066 gas** → ±0.0000751 BNB at 0.05 gwei, ±0.0001502 BNB at 0.1 gwei. Well below the deployer wallet balance (±0.000509 BNB). Mainnet gas may differ slightly; re-measure at deploy preview.
 - Two lessons recorded in the tests: (1) solc's Cancun default fails on older chains because of PUSH0 — hence `evmVersion: "paris"`; (2) ethers v6 caches the block number, so balance tests use raw JSON-RPC (`eth_getBalance`) — see the comments in `test/local-deploy-test.mjs`.
 
-**Deployed ✅ 18 Nov 2026:** contract `0x7c4686636e03fc055b588c1e0f6753048Cd56Cd2` on BSC, deploy tx `0xf38a1a0531254ca585ac39bad957e4ad66b64c00ce260479f5bfb446ec905b26` (block 134,238,782, gas used 1,490,802 @ 0.09 gwei ≈ 0.000134 BNB, deployer `0x73dbA5Ea5432283B8F508F4d3b55161F0D575d55`). Live checks: `agentIdContract()` = `0x60b9262456de011f7d15a54cdd8c48baaa8b022f`, `isAgentIdHolder(vanmuse.ai)` = true, deployer = false, totals 0. **NOT done yet:** BscScan verification, GitHub publish, X post — see the Checklist below.
+**Deployed ✅ 18 Nov 2026:** contract `0x7c4686636e03fc055b588c1e0f6753048Cd56Cd2` on BSC, deploy tx `0xf38a1a0531254ca585ac39bad957e4ad66b64c00ce260479f5bfb446ec905b26` (block 134,238,782, gas used 1,490,802 @ 0.09 gwei ≈ 0.000134 BNB, deployer `0x73dbA5Ea5432283B8F508F4d3b55161F0D575d55`). Live checks: `agentIdContract()` = `0x60b9262456de011f7d15a54cdd8c48baaa8b022f`, `isAgentIdHolder(vanmuse.ai)` = true, deployer = false, totals 0. **Sourcify verification ✅ Exact Match (runtime + creation), 18 Nov 2026 ~18:52 WIB, job 942e385a-2a22-45f5-b718-962172e573f1, match 59466614.** BscScan verification still pending: Sourcify's forward to Etherscan hit the "Daily limit of 500 source code submissions reached", and BscScan's own pages were Cloudflare-blocked for the automated browser — submit directly on BscScan when reachable. **NOT done yet:** BscScan verification, GitHub publish, X post — see the Checklist below.
 
 ## Run locally
 
@@ -96,6 +96,7 @@ At least 30 different Agent ID addresses must interact with the contract during 
 - [x] `data/mints.json` examples (5 real mints, labelled as examples)
 - [x] X thread draft (`promo/X-thread.md`) — NOT posted yet
 - [x] Deploy to BSC — `0x7c4686636e03fc055b588c1e0f6753048Cd56Cd2`, tx `0xf38a1a0531254ca585ac39bad957e4ad66b64c00ce260479f5bfb446ec905b26`
+- [x] Sourcify verification — Exact Match (runtime + creation)
 - [ ] BscScan verification + public GitHub repo
 - [x] Fill the contract address into `web/app.js` + README
 - [ ] Reach 30 Agent ID addresses (Boltbook + X promotion)
