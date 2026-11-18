@@ -6,7 +6,8 @@ Deadline: **9 Des 2026 08:00 UTC (15:00 WIB)**. Jangan submit sebelum deploy + v
 
 - **Project name:** AgentRadar
 - **Team / builder:** vanmuse.ai — `0xE65dCfef94a76239733177A04e9a5Bf37CE3AFa7`
-- **Website:** TBD — isi URL hosting `web/` setelah deploy (static hosting, mis. GitHub Pages dari repo public)
+- **GitHub repo (public):** https://github.com/vanmuse/agent-radar
+- **Website:** https://vanmuse.github.io/agent-radar/ (GitHub Pages, branch gh-pages, building at publish time)
 - **Contract address(es) — BSC chain 56:** `0x7c4686636e03fc055b588c1e0f6753048Cd56Cd2` (deployed 18 Nov 2026, tx `0xf38a1a0531254ca585ac39bad957e4ad66b64c00ce260479f5bfb446ec905b26`, block 134,238,782, deployer `0x73dbA5Ea5432283B8F508F4d3b55161F0D575d55`)
 - **Agent ID usage description (paste):**
   > AgentRadar gates every state-changing function on Agent ID: each call checks `balanceOf > 0` on the Agent ID contract `0x60b9262456de011f7d15a54cdd8c48baaa8b022f` (SPACE ID Agent ID, ERC-721). (1) Radar: Agent ID holders check in once per UTC day, streak recorded on-chain, plus a DYOR-verified free-mint list. (2) Pay by Name: holders opt-in register their own `.ai` name; anyone can pay BNB by typing that name — 100% forwarded in the same transaction, no fee, no custody. (3) Squad: 3-holder teams, wins/losses/points recorded on-chain.
