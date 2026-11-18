@@ -1,33 +1,33 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AgentRadar — Radar free-mint, bayar pakai nama, dan squad untuk holder Agent ID</title>
+<title>AgentRadar — Free-mint radar, pay by name, and squads for Agent ID holders</title>
 <link rel="stylesheet" href="style.css">
 <script src="https://cdn.jsdelivr.net/npm/ethers@6.17.0/dist/ethers.umd.min.js"></script>
 </head>
 <body>
 <header>
   <h1>Agent<span>Radar</span></h1>
-  <p>Radar free-mint, bayar pakai nama <code>.ai</code>, dan squad 3 orang — semuanya digerbangi oleh Agent ID di BNB Chain.</p>
-  <p class="small muted">Satu kontrak, satu proyek. Dibangun untuk Agent ID Hackathon (submission s.d. 9 Des 2026 08:00 UTC). Bukan produk Binance.</p>
+  <p>Free-mint radar, pay by <code>.ai</code> name, and 3-person squads — all gated by Agent ID on BNB Chain.</p>
+  <p class="small muted">One contract, one project. Built for the Agent ID Hackathon (submissions until 9 Dec 2026 08:00 UTC). Not a Binance product.</p>
 </header>
 <main>
   <div class="warning">
-    <strong>⚠️ Risiko — baca dulu.</strong>
-    <p class="small">Crypto itu berisiko. Jangan pernah kirim seed phrase / private key / kode pairing ke siapa pun — AgentRadar tidak pernah memintanya. Setiap transaksi di sini harus kamu konfirmasi sendiri di wallet; tidak ada auto-sign dan tidak ada penarikan otomatis. Daftar mint di tab Radar adalah <strong>contoh lama</strong>: selalu cek kontraknya di BscScan/Sourcify dan pastikan mint-nya masih buka dan masih gratis sebelum mint. DYOR.</p>
+    <strong>⚠️ Risk — read first.</strong>
+    <p class="small">Crypto is risky. Never send your seed phrase / private key / pairing code to anyone — AgentRadar never asks for them. Every transaction here must be confirmed by you in your own wallet; there is no auto-sign and no automatic withdrawal. The mint list in the Radar tab shows <strong>past examples</strong>: always check the contract on BscScan/Sourcify and make sure the mint is still open and still free before minting. DYOR.</p>
   </div>
 
   <div class="card">
     <div class="row">
       <button id="connectBtn">Connect Wallet</button>
-      <span id="account" class="muted">Belum terhubung</span>
+      <span id="account" class="muted">Not connected</span>
       <span id="chain" class="muted"></span>
     </div>
-    <p>Status Agent ID: <span id="holderStatus" class="muted">—</span></p>
-    <p class="small muted">Agent ID contract: <code>0x60b9262456de011f7d15a54cdd8c48baaa8b022f</code> (BNB Chain) · Kontrak AgentRadar: <code id="contractAddr">belum di-deploy — TBD</code></p>
-    <p class="small">Total check-in: <span id="totalCheckIns">—</span> · Total squad: <span id="totalSquads">—</span></p>
+    <p>Agent ID status: <span id="holderStatus" class="muted">—</span></p>
+    <p class="small muted">Agent ID contract: <code>0x60b9262456de011f7d15a54cdd8c48baaa8b022f</code> (BNB Chain) · AgentRadar contract: <code id="contractAddr">not deployed yet — TBD</code></p>
+    <p class="small">Total check-ins: <span id="totalCheckIns">—</span> · Total squads: <span id="totalSquads">—</span></p>
   </div>
 
   <div class="tabs">
@@ -38,69 +38,69 @@
 
   <section id="tab-radar" class="tab active">
     <div class="card">
-      <h2>Check-in harian</h2>
-      <p class="small muted">Satu kali per hari UTC, khusus holder Agent ID. Streak berurutan tercatat on-chain.</p>
-      <p>Streak kamu: <strong id="streak">—</strong> · Total check-in kamu: <strong id="myCheckIns">—</strong> · Terakhir: <span id="lastDay">—</span></p>
-      <button id="checkInBtn" disabled>Check-in hari ini</button>
+      <h2>Daily check-in</h2>
+      <p class="small muted">Once per UTC day, for Agent ID holders only. Your consecutive-day streak is recorded on-chain.</p>
+      <p>Your streak: <strong id="streak">—</strong> · Your total check-ins: <strong id="myCheckIns">—</strong> · Last: <span id="lastDay">—</span></p>
+      <button id="checkInBtn" disabled>Check in today</button>
     </div>
     <div class="card">
-      <h2>Free-mint radar (contoh)</h2>
-      <p class="small muted">Contoh mint gratis yang pernah lolos DYOR. Bukan rekomendasi — verifikasi live sebelum mint. Daftar lengkap dimuat dari <code>data/mints.json</code>.</p>
-      <div id="mintList"><p class="muted">Memuat…</p></div>
+      <h2>Free-mint radar (examples)</h2>
+      <p class="small muted">Examples of free mints that passed DYOR in the past. Not recommendations — verify live before minting. The full list loads from <code>data/mints.json</code>.</p>
+      <div id="mintList"><p class="muted">Loading…</p></div>
     </div>
   </section>
 
   <section id="tab-pay" class="tab">
     <div class="card">
-      <h2>1. Daftarkan namamu (opt-in)</h2>
-      <p class="small muted">Hanya kamu yang bisa mendaftarkan namamu, untuk dirimu sendiri. Nama 3–32 karakter, huruf kecil a–z, angka, titik, strip. Satu alamat = satu nama (bisa ganti, nama lama dibebaskan). Ini <strong>bukan</strong> alat untuk mencari wallet orang lain.</p>
-      <label for="regName">Nama .ai kamu</label>
-      <div class="row"><input id="regName" placeholder="vanmuse.ai" maxlength="32"><button id="regBtn" disabled>Daftarkan</button></div>
-      <p class="small">Namamu saat ini: <strong id="myName">—</strong></p>
+      <h2>1. Register your name (opt-in)</h2>
+      <p class="small muted">Only you can register your own name, for yourself. Names are 3–32 characters, lowercase a–z, numbers, dot, dash. One address = one name (you can change it; the old name is freed). This is <strong>not</strong> a tool for looking up other people's wallets.</p>
+      <label for="regName">Your .ai name</label>
+      <div class="row"><input id="regName" placeholder="vanmuse.ai" maxlength="32"><button id="regBtn" disabled>Register</button></div>
+      <p class="small">Your current name: <strong id="myName">—</strong></p>
     </div>
     <div class="card">
-      <h2>2. Bayar pakai nama</h2>
-      <p class="small muted">Ketik nama penerima, bukan alamat 0x… 100% BNB yang kamu kirim langsung diteruskan ke penerima di transaksi yang sama — kontrak tidak menyimpan dana dan tidak memotong fee. Transaksi ini harus kamu konfirmasi sendiri di wallet.</p>
-      <label for="payName">Nama penerima</label>
+      <h2>2. Pay by name</h2>
+      <p class="small muted">Type the recipient's name, not a long 0x… address. 100% of the BNB you send is forwarded to the recipient in the same transaction — the contract holds no funds and takes no fee. You must confirm this transaction yourself in your wallet.</p>
+      <label for="payName">Recipient name</label>
       <input id="payName" placeholder="alice.ai" maxlength="32">
-      <label for="payAmount">Jumlah (BNB)</label>
+      <label for="payAmount">Amount (BNB)</label>
       <input id="payAmount" placeholder="0.01" inputmode="decimal">
-      <p class="small">Penerima: <strong id="payResolve">—</strong></p>
-      <button id="payBtn" disabled>Kirim — saya konfirmasi di wallet</button>
+      <p class="small">Recipient: <strong id="payResolve">—</strong></p>
+      <button id="payBtn" disabled>Send — I'll confirm in my wallet</button>
     </div>
   </section>
 
   <section id="tab-squad" class="tab">
     <div class="card">
-      <h2>Squad (maks. 3 anggota)</h2>
-      <p class="small muted">Bentuk tim 3 Agent ID — seperti tim collab PodMint. Satu alamat hanya bisa di satu squad dalam satu waktu; keluar dulu untuk pindah.</p>
-      <label for="squadName">Nama squad baru</label>
-      <div class="row"><input id="squadName" placeholder="pod-squad" maxlength="32"><button id="createSquadBtn" disabled>Buat squad</button></div>
-      <label for="joinId">Gabung squad (ID)</label>
-      <div class="row"><input id="joinId" placeholder="1" inputmode="numeric"><button id="joinSquadBtn" disabled>Gabung</button></div>
-      <div class="row"><button id="leaveSquadBtn" disabled class="secondary">Keluar dari squad</button></div>
-      <p class="small">Squad kamu: <strong id="mySquad">—</strong></p>
+      <h2>Squad (max 3 members)</h2>
+      <p class="small muted">Form a team of 3 Agent IDs — like a PodMint collab team. One address can only be in one squad at a time; leave first to switch.</p>
+      <label for="squadName">New squad name</label>
+      <div class="row"><input id="squadName" placeholder="pod-squad" maxlength="32"><button id="createSquadBtn" disabled>Create squad</button></div>
+      <label for="joinId">Join a squad (ID)</label>
+      <div class="row"><input id="joinId" placeholder="1" inputmode="numeric"><button id="joinSquadBtn" disabled>Join</button></div>
+      <div class="row"><button id="leaveSquadBtn" disabled class="secondary">Leave squad</button></div>
+      <p class="small">Your squad: <strong id="mySquad">—</strong></p>
     </div>
     <div class="card">
-      <h2>Catat hasil</h2>
-      <p class="small muted">Hanya anggota squad yang bisa mencatat hasil squad-nya sendiri.</p>
-      <label for="resultId">ID squad</label>
+      <h2>Record a result</h2>
+      <p class="small muted">Only members of a squad can record that squad's results.</p>
+      <label for="resultId">Squad ID</label>
       <input id="resultId" placeholder="1" inputmode="numeric">
-      <label for="resultPoints">Poin</label>
+      <label for="resultPoints">Points</label>
       <input id="resultPoints" placeholder="10" inputmode="numeric">
       <div class="row">
-        <button id="winBtn" disabled>Menang</button>
-        <button id="loseBtn" disabled class="secondary">Kalah</button>
+        <button id="winBtn" disabled>Won</button>
+        <button id="loseBtn" disabled class="secondary">Lost</button>
       </div>
-      <p class="small">Detail squad: <span id="squadDetail">—</span></p>
-      <div class="row"><input id="viewSquadId" placeholder="ID squad untuk dilihat" inputmode="numeric"><button id="viewSquadBtn" class="secondary">Lihat squad</button></div>
+      <p class="small">Squad details: <span id="squadDetail">—</span></p>
+      <div class="row"><input id="viewSquadId" placeholder="Squad ID to view" inputmode="numeric"><button id="viewSquadBtn" class="secondary">View squad</button></div>
     </div>
   </section>
 
-  <div class="card"><h2>Log</h2><div id="log">Siap.</div></div>
+  <div class="card"><h2>Log</h2><div id="log">Ready.</div></div>
 </main>
 <footer>
-  AgentRadar oleh vanmuse.ai — satu kontrak, open-source, tanpa fee, tanpa custody. Agent ID adalah identitas on-chain dari Agentic Wallet; AgentRadar hanya membaca <code>balanceOf</code>-nya sebagai gerbang. Bukan produk/afiliiasi Binance.
+  AgentRadar by vanmuse.ai — one contract, open-source, no fee, no custody. Agent ID is the on-chain identity of an Agentic Wallet; AgentRadar only reads its <code>balanceOf</code> as a gate. Not a Binance product or affiliate.
 </footer>
 <script src="app.js"></script>
 </body>
