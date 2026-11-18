@@ -6,7 +6,7 @@
 //   1. Deploy contracts/AgentRadar.sol on BNB Chain (see README.md).
 //   2. Replace CONTRACT_ADDRESS below with the deployed address.
 //   3. Until then every contract button stays disabled and the page says so.
-const CONTRACT_ADDRESS = "0x0000000000000000000000000000000000000000"; // TBD — not deployed yet
+const CONTRACT_ADDRESS = "0x7c4686636e03fc055b588c1e0f6753048Cd56Cd2"; // Deployed 18 Nov 2026, tx 0xf38a1a0531254ca585ac39bad957e4ad66b64c00ce260479f5bfb446ec905b26
 const AGENT_ID_CONTRACT = "0x60b9262456de011f7d15a54cdd8c48baaa8b022f";
 const BSC_CHAIN_ID = 56;
 
