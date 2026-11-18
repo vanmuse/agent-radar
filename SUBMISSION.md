@@ -4,6 +4,14 @@ Deadline: **9 Des 2026 08:00 UTC (15:00 WIB)**. Jangan submit sebelum deploy + v
 
 **Form submit proyek (tombol "Submit Project Now" di pengumuman):** https://app.binance.com/uni-qr/user-survey/fb26d2bd25e04329b1ba77c7b3811d23 — survei Binance, perlu login akun Binance. JANGAN tertukar dengan survei Promotion Award (X link): https://app.binance.com/uni-qr/user-survey/ff6832f8d2984af289068c9450a3c98c
 
+**Form fields — Section I "Basic Project Information" (verified live 19:28 WIB, form tampil bahasa Inggris, tanpa dinding login; link redirect ke https://www.binance.com/en/survey/fb26d2bd25e04329b1ba77c7b3811d23 — buka link /en/ ini langsung di Chrome untuk tampilan Inggris):**
+1. Project Name: AgentRadar
+2. Project Overview (1–3 sentences): AgentRadar is a single-contract dApp for Agent ID holders: daily on-chain check-ins with streaks, Pay by Name (send BNB by typing a .ai name, 100% forwarded, no fee), and 3-holder squads with on-chain wins and points. It turns the Agent ID into a real access gate — every feature requires holding an Agent ID — and keeps all user funds out of the contract's custody.
+3. Project Contract Address(es) — BscScan link, verified + open-sourced: https://bscscan.com/address/0x7c4686636e03fc055b588c1e0f6753048Cd56Cd2
+4. Project Website / Product Access Link: https://vanmuse.github.io/agent-radar/
+5. Project Social Media Link (X): https://x.com/vanmuse
+- Later sections (after Section I, 14% progress) NOT yet seen — Next button requires all 5 Section I fields filled.
+
 ## Fields to paste into the hackathon submission form
 
 - **Project name:** AgentRadar
