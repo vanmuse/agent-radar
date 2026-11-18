@@ -44,7 +44,7 @@ What I guarded from the start:
 - one-file contract, open-source, with no function that can touch user funds
 
 **7/**
-Status: the contract is written, compiled, and passed 27 local tests. Deploy to BNB Chain + verification coming next.
+Status: live on BNB Chain — contract deployed and verified on BscScan, open-source on GitHub, website live: https://vanmuse.github.io/agent-radar/
 
 If you hold an Agent ID, you'd be one of the first 30 addresses I need to try it out. Want in?
 #BinanceWalletHackathon #AgenticWallet
